@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.flexMain{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    /* background-image: url('../../images/main_background.jpg'); */
+    background-color: transparent;
+    position: absolute;
+    background-size: cover;
+    border: 15px solid rgba(0, 0, 0, 0.5);
+}
+
+.flexMenu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 30%;
+    justify-content: space-between;
+    color: burlywood;
+}
+
+.activity{
+    background-color: burlywood;
+    color: #562B05;
+    width: 250px;
+    padding: 10px;
+    height: 40px;
+    background-image: url('../../images/plank.jpg');
+    border: 2px solid rgba(0, 0, 0, 0.466);
+    font-size: large;
+    font-weight: bold;
+    margin-top: 17px;
+}
+
+.activity:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.flexCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 70%;
+    margin-top: 25px;
+}
+
+h3, select, input{
+    margin: 0;
+    padding: 0;
+}
+
+Card h3{
+    margin-bottom: 10px;
+    color: black;
+}
+
+h2{
+    line-height: 80px;
+    margin: 0;
+}
+
+input{
+    margin-top: 10px;
+    background-image: url('../../images/plank.jpg');
+    color: #562B05;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    font-size: large;
+    font-weight: bold;
+}
+
+::placeholder{
+    color: #562B05;
+    text-align: center;
+}
+
+select{
+    margin-top: 10px;
+    background-image: url('../../images/plank.jpg');
+    color: #562B05;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.input{
+    background-image: url('../../images/wood.jpg');
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.493);
+    border-radius: 40px;
+    height: 100px;
+}
+
+.title{
+    border: 4px dotted burlywood;
+    line-height: 70px;
+}
+
+/* BOTON CAMBIO DE PAGINA */
+
+.flexButton{
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url('../../images/wood.jpg');
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 40px;
+    border: 2px solid rgba(0, 0, 0, 0.466);
+}
+
+button{
+    width: 125px;
+}
+
+.button{
+    background-color: burlywood;
+    color: #562B05;
+    width: 125px;
+    height: 40px;
+    background-image: url('../../images/plank.jpg');
+    border: 2px solid rgba(0, 0, 0, 0.466);
+    font-size: large;
+    font-weight: bold;
+}
+
+.button:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.hidden{
+    visibility: hidden
+}

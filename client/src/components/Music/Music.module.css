@@ -1,0 +1,41 @@
+.audio{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-align: left;
+    z-index: 5;
+}
+
+.buttonControl{
+    background-color: burlywood;
+    color: #562B05;
+    width: 200px;
+    height: 40px;
+    background-image: url('../../images/plank.jpg');
+    border: 2px solid rgba(0, 0, 0, 0.466);
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.buttonControl:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.buttonVolume{
+    background-color: burlywood;
+    color: #562B05;
+    width: 40px;
+    height: 40px;
+    background-image: url('../../images/plank.jpg');
+    border: 2px solid rgba(0, 0, 0, 0.466);
+    font-size: large;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.buttonVolume:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}

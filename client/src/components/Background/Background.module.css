@@ -1,0 +1,11 @@
+.background{
+    position: fixed;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 1920px;
+    max-height: 1080px;
+    z-index: -1;
+}

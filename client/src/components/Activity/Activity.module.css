@@ -1,0 +1,72 @@
+.body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+}
+
+form{
+    background-image: url('../../images/wood.jpg');
+    width: 25%;
+    margin: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: burlywood;
+    padding-bottom: 30px;
+}
+
+.title{
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.error{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.button{
+    background-color: burlywood;
+    color: #562B05;
+    width: 200px;
+    height: 35px;
+    background-image: url('../../images/plank.jpg');
+    border: 2px solid rgba(0, 0, 0, 0.466);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.remove{
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    background-image: url('../../images/plank.jpg');
+    color: #562B05;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    text-align: center;
+    line-height: 21.5px;
+}
+

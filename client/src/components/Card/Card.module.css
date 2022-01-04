@@ -1,0 +1,34 @@
+.card {
+    width: 360px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px 15px 10px 15px;
+    background-image: url('../../images/pergamino.jpg');
+    border: 2px solid rgba(0, 0, 0, 0.472);
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.image {
+    width: 250px;
+    height: 150px;
+    filter: sepia(75%);
+    border: 2px solid rgba(0, 0, 0, 0.473)
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+}
+
+.h3{
+    display: inline-block;
+    margin: 0 5px 5px;
+}
+
+h4{
+    margin: 0;
+    padding: 0;
+}
