@@ -45,7 +45,8 @@
 }
 
 .board div h2{
-    margin-top: 20px;
+    margin-top: 40px;
+    width: 400px;
 }
 
 .infoPanel{
@@ -60,11 +61,23 @@
     margin-bottom: 50px;
 }
 
+.boardActivities h2{
+    margin-bottom: 30px !important;
+}
+
 .info{
     background-image: url('../../images/plank.jpg');
     width: 300px;
     line-height: 60px;
     margin: 30px 0;
+    border: 2px solid rgba(0, 0, 0, 0.479);
+}
+
+.activityInfo{
+    background-image: url('../../images/plank.jpg');
+    width: 300px;
+    line-height: 60px;
+    margin: 15px;
     border: 2px solid rgba(0, 0, 0, 0.479);
 }
 
@@ -90,4 +103,5 @@
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
+    justify-content: center;
 }

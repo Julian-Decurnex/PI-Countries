@@ -50,7 +50,7 @@ export default function Detail(){
                         country[0].hasOwnProperty('activities') ? country[0].activities.map(activity => {
                             id++
                             return (
-                                <div key={id} className={styles.info}>
+                                <div key={id} className={styles.activityInfo}>
                                     <h3>Nombre: {activity.name}</h3>
                                     <h4>Dificultad: {activity.difficulty}</h4>
                                     <h4>Duración: {activity.duration}</h4>

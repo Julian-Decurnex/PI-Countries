@@ -7,12 +7,15 @@ import Detail from './components/Detail/Detail.jsx';
 import Music from './components/Music/Music';
 import Background from './components/Background/Background';
 
+import HomeClass from './components/HomeClass';
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
           <Route exact path='/' element={[<LandingPage key={1}/>, <Music  key={2}/>]}></Route>
+          {/* <Route path='/home' element={[<HomeClass key={1}/>, <Music key={2}/>, <Background key={3}/>]}></Route> */}
           <Route path='/home' element={[<Home key={1}/>, <Music key={2}/>, <Background key={3}/>]}></Route>
           <Route path='/activity' element={[<Activity key={1}/>, <Music key={2}/>]}/>
           <Route path='/home/:id' element={[<Detail key={1}/>, <Music key={2}/>, <Background key={3}/>]}/>
