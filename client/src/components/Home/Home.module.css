@@ -39,7 +39,7 @@ body{
     border: 2px solid rgba(0, 0, 0, 0.466);
     font-size: large;
     font-weight: bold;
-    margin-top: 17px;
+    margin-top: 12px;
 }
 
 .activity:hover{
@@ -53,7 +53,7 @@ body{
     flex-wrap: wrap;
     height: 100%;
     width: 70%;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 h3, select, input{
@@ -104,7 +104,7 @@ select{
     padding: 10px;
     border: 2px solid rgba(0, 0, 0, 0.493);
     border-radius: 40px;
-    height: 100px;
+    height: 90px;
 }
 
 .title{
