@@ -52,74 +52,90 @@ router.get('/', (req, res) => {
 })
 
 router.get('/countries', async (req, res, next) => {
-    if(!req.query.name){
-        let countries = await getCountries()
-        countries.forEach(country => {
-            Country.findOrCreate({
-                where: {
-                    id: country.id,
-                    name: country.name,
-                    img: country.img,
-                    continent: country.continent,
-                    capital: country.capital,
-                    subregion: country.subregion,
-                    area: country.area,
-                    population: country.population
-                }
+    try {
+        if(!req.query.name){
+            let countries = await getCountries()
+            countries.forEach(country => {
+                Country.findOrCreate({
+                    where: {
+                        id: country.id,
+                        name: country.name,
+                        img: country.img,
+                        continent: country.continent,
+                        capital: country.capital,
+                        subregion: country.subregion,
+                        area: country.area,
+                        population: country.population
+                    }
+                })
             })
-        })
-        const allCountries = await Country.findAll({
-            include: Activity
-        })
-        res.send(allCountries)
-    } else{
-        next()
+            const allCountries = await Country.findAll({
+                include: Activity
+            })
+            res.send(allCountries)
+        } else{
+            next()
+        }
+    } catch(error) {
+        res.send(error)
     }
 })
 
 //Si recibe query, devuelve el pais cuyo nombre incluya el string ingresado
 
 router.get('/countries', async (req, res) => {
-    const {name} = req.query
-    const allCountries = await Country.findAll({
-        include: Activity
-    })
-    const country = allCountries.filter(country => country.name.toLowerCase().includes(name.toLowerCase()))
-    country.length ? res.send(country) : res.send('No se encontro ningun pais que coincida con los parametros de busqueda')
+    try {
+        const {name} = req.query
+        const allCountries = await Country.findAll({
+            include: Activity
+        })
+        const country = allCountries.filter(country => country.name.toLowerCase().includes(name.toLowerCase()))
+        country.length ? res.send(country) : res.send('No se encontro ningun pais que coincida con los parametros de busqueda')
+    } catch(error) {
+        res.send(error)
+    }
 })
 
 //Si recibe id del pais por params
 
 router.get('/countries/:countryId', async (req, res) => {
-    const {countryId} = req.params
-    const country = await Country.findAll({
-        where: {id: countryId.toUpperCase()},
-        include: Activity
-    })
-    res.send(country)
+    try {
+        const {countryId} = req.params
+        const country = await Country.findAll({
+            where: {id: countryId.toUpperCase()},
+            include: Activity
+        })
+        res.send(country)
+    } catch(error) {
+        res.send(error)
+    }
 })
 
 //Agregamos una actividad cuya data nos llega desde el formularios de Nueva Actividad
 
 router.post('/activity', async (req, res) => {
-    const {name, difficulty, duration, season, country} = req.body
+    try {
+        const {name, difficulty, duration, season, country} = req.body
 
-    const newActivity = await Activity.create({
-        name,
-        difficulty,
-        duration,
-        season,
-    })
+        const newActivity = await Activity.create({
+            name,
+            difficulty,
+            duration,
+            season,
+        })
 
-    let activityCountry = await Country.findAll({
-        where: {name: country}
-    })
+        let activityCountry = await Country.findAll({
+            where: {name: country}
+        })
 
-    activityCountry.forEach(country => {
-        newActivity.addCountry(country)
-    })
+        activityCountry.forEach(country => {
+            newActivity.addCountry(country)
+        })
 
-    res.send('Actividad creada con exito!')
+        res.send('Actividad creada con exito!')
+    } catch(error) {
+        res.send(error)
+    }
 })
 
 
