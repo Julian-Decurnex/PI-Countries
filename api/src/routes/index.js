@@ -37,6 +37,14 @@ async function getCountries () {
     return(orderedApiInfo)
 }
 
+// router.get('/countries/:continent', async (req, res) => {
+//     const {continent} = req.params
+//     let countries = await Country.findAll({
+//         where: {continent: continent}
+//     })
+//     res.send(countries)
+// })
+
 //Si no recibe query, devuelve todos los paises
 
 router.get('/countries', async (req, res, next) => {

@@ -6,8 +6,7 @@ import Activity from './components/Activity/Activity.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Music from './components/Music/Music';
 import Background from './components/Background/Background';
-
-import HomeClass from './components/HomeClass';
+// import HomeClass from './components/HomeClass';
 
 function App() {
   return (
