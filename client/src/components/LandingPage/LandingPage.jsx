@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import styles from './LandingPage.module.css'
-import video from '../../video/fondo1.mp4'
+import video from '../../video/puestaDeSol.mp4'
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getCountries } from "../../actions";

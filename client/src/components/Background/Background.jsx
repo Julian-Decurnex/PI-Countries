@@ -1,5 +1,5 @@
 import styles from './Background.module.css'
-import video from '../../video/fondo2.mp4'
+import video from '../../video/paisajesDelMundo.mp4'
 
 export default function Background(){
     return (
