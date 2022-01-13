@@ -48,7 +48,7 @@ async function getCountries () {
 //Si no recibe query, devuelve todos los paises
 
 router.get('/', (req, res) => {
-    res.send(200)
+    res.sendStatus(200)
 })
 
 router.get('/countries', async (req, res, next) => {
