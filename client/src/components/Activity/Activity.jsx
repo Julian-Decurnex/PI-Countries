@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from 'react-redux'
 import { addActivity, getCountries } from "../../actions"
-// import video from '../../video/fondo_brujula.mp4'
+import video from '../../video/fondoBrujula.mp4'
 import styles from './Activity.module.css'
 
 function validate(input){
@@ -112,7 +112,7 @@ export default function Activity(){
     return (
         <div className={styles.body}>
             <video autoPlay loop muted>
-                <source src="https://www.dropbox.com/s/b2c23xrb9b4bfxk/fondoBrujula.mp4?dl=0" type="video/mp4"/>
+                <source src={video} type="video/mp4"/>
                 Tu navegador no soporta el fondo de pantalla
             </video>
             <form onSubmit={(e) => handleSubmit(e)}>
